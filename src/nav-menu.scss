@@ -2,3 +2,103 @@
     position: absolute;
     left: 0;
 }
+
+.search-container {
+    @media (max-width: 767px) {
+        width: 100% !important;
+    }
+}
+
+.search-box {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+    linear-gradient(0deg, #0E0C15, #0E0C15);
+    border: 1px solid #FFFFFF1A;
+
+    width: 720px;
+    height: 72px;
+    padding: 24px 56px;
+    border-radius: 80px;
+    gap: 8px;
+    color: #ADA8C3;
+
+    @media (max-width: 767px) {
+        width: 100% !important;
+        height: 24px !important;
+    }
+}
+
+.search-icon {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 24px;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.nav-memu-lelf {
+    width: 304px;
+    height: 56px;
+    padding: 12px 0px 12px 0px;
+    gap: 10px;
+    color: #ffffff;
+}
+
+.blog-title {
+    border-bottom: 1px solid #FFFFFF26;
+}
+
+.blog-menu {
+    @media (max-width: 767px) {
+        display: none !important;
+    }
+}
+
+.block-coint {
+    width: 294px;
+    height: 84px;
+    padding: 8px 16px 8px 16px;
+    border-radius: 16px;
+    border: 1px solid #FFFFFF0D;
+    bottom: 80px;
+    left: -60px;
+    background: #4740605E;
+
+    @media (max-width: 767px) {
+        bottom: -24px;
+        left: -0px;
+    }
+
+    &.block-price {
+        top: 160px;
+        right: -60px;
+        bottom: auto;
+        left: auto;
+
+        @media (max-width: 767px) {
+            top: -24px;
+            right: 0px;
+            bottom: auto;
+            left: auto;
+        }
+    }
+
+    .commmand {
+        width: 40px;
+        height: 20px;
+        border-radius: 4px;
+        font: 'Space Grotesk';
+    }
+
+    .commmand-sell {
+        background: #DC3768;
+    }
+
+    .commmand-buy {
+        background: #00CD88;
+    }
+
+    .coint-price {
+        color: #00CD88;
+    }
+}

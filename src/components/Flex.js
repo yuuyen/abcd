@@ -34,6 +34,17 @@ export const FlexFullCenter = ({
     )
 }
 
+export const FlexMidCenter = ({
+    children,
+    className
+}) => {
+    return (
+        <div className={clsx('d-flex align-items-center', className)}>
+            {children}
+        </div>
+    )
+}
+
 export const FlexColumn = ({
     children,
     className

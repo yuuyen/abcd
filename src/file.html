@@ -1,0 +1,1677 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="theme-color" content="#000000">
+        <!--
+            manifest.json provides metadata used when your web app is added to the
+            homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+            -->
+        <link rel="manifest" href="/manifest.json">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <title>React App</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <style type="text/css">.nav-menu-mobile {
+            position: absolute;
+            left: 0; }
+            @media (max-width: 767px) {
+            .search-container {
+            width: 100% !important; } }
+            .search-box {
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(0deg, #0E0C15, #0E0C15);
+            border: 1px solid #FFFFFF1A;
+            width: 720px;
+            height: 72px;
+            padding: 24px 56px;
+            border-radius: 80px;
+            grid-gap: 8px;
+            gap: 8px;
+            color: #ADA8C3; }
+            @media (max-width: 767px) {
+            .search-box {
+            width: 100% !important;
+            height: 24px !important; } }
+            .search-icon {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 24px;
+            transform: translateY(-50%); }
+            .nav-memu-lelf {
+            width: 304px;
+            height: 56px;
+            padding: 12px 0px 12px 0px;
+            grid-gap: 10px;
+            gap: 10px;
+            color: #ffffff; }
+            .blog-title {
+            border-bottom: 1px solid #FFFFFF26; }
+            @media (max-width: 767px) {
+            .blog-menu {
+            display: none !important; } }
+            .block-coint {
+            width: 294px;
+            height: 84px;
+            padding: 8px 16px 8px 16px;
+            border-radius: 16px;
+            border: 1px solid #FFFFFF0D;
+            bottom: 80px;
+            left: -60px;
+            background: #4740605E; }
+            @media (max-width: 767px) {
+            .block-coint {
+            bottom: -24px;
+            left: -0px; } }
+            .block-coint.block-price {
+            top: 160px;
+            right: -60px;
+            bottom: auto;
+            left: auto; }
+            @media (max-width: 767px) {
+            .block-coint.block-price {
+            top: -24px;
+            right: 0px;
+            bottom: auto;
+            left: auto; } }
+            .block-coint .commmand {
+            width: 40px;
+            height: 20px;
+            border-radius: 4px;
+            font: 'Space Grotesk'; }
+            .block-coint .commmand-sell {
+            background: #DC3768; }
+            .block-coint .commmand-buy {
+            background: #00CD88; }
+            .block-coint .coint-price {
+            color: #00CD88; }
+        </style>
+        <style type="text/css">body {
+            background-color: #050707;
+            padding: 0px;
+            margin: 0px;
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 0px;
+            color: #CAC6DD; }
+            .text-white {
+            color: #fff; }
+            .upper-case {
+            text-transform: uppercase; }
+            .container-gap {
+            margin-top: 80px; }
+            @media (max-width: 767px) {
+            .container-gap {
+            margin-top: 40px; } }
+            .header {
+            margin: 0 auto;
+            width: 1170px; }
+            .header-logo {
+            background-image: url(./assets/link-logo.svg);
+            background-color: transparent;
+            width: 138px;
+            height: 48px; }
+            .title-logo {
+            position: absolute;
+            background-image: url(./assets/title-logo.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 1440px; }
+            .main-logo {
+            position: relative;
+            width: 100%; }
+            .main-logo .main-shadow {
+            position: absolute;
+            width: 86%;
+            height: 24px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            border-radius: 0px 0px 20px 20px;
+            bottom: -24px;
+            background-color: #1B1B2E; }
+            @media (max-width: 767px) {
+            .main-logo .main-shadow {
+            display: none; } }
+            .header-nav {
+            padding: 0px;
+            color: #fff; }
+            .header-nav .nav-selected {
+            border-bottom: 2px solid #00C4F4; }
+            .header-nav a {
+            cursor: pointer;
+            border-bottom: 2px solid transparent; }
+            .header-nav a:hover {
+            border-bottom: 2px solid #00C4F4;
+            opacity: 0.6; }
+            .app-button {
+            max-width: 240px;
+            height: 48px;
+            -webkit-user-select: none;
+            user-select: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-transform: uppercase;
+            background: linear-gradient(107.26deg, #566070 15%, #060606 100%);
+            font-size: 14px !important;
+            color: #FBFAFF !important;
+            border: none !important; }
+            .app-button:hover {
+            opacity: 0.7; }
+            @media (max-width: 767px) {
+            .app-button {
+            width: 100%;
+            max-width: none; } }
+            .text-title {
+            font-size: 60px;
+            color: #fff; }
+            @media (max-width: 767px) {
+            .text-title {
+            font-size: 32px; } }
+            .text-hight-light {
+            color: #00C4F4; }
+            hr {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 100%); }
+            .region-box-logo {
+            background-image: url(./assets/background-algorithm.svg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 400px; }
+            @media (max-width: 767px) {
+            .region-box-logo {
+            height: 300px; } }
+            .tag-paper-logo {
+            background-image: url(./assets/tag-tech-paper.svg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 468px; }
+            @media (max-width: 767px) {
+            .tag-paper-logo {
+            height: 300px; } }
+            .tag-developer-logo {
+            background-image: url(./assets/tag-developer.svg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 400px; }
+            @media (max-width: 767px) {
+            .tag-developer-logo {
+            height: 300px; } }
+            .tag-network-logo {
+            background-image: url(./assets/tag-network.svg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 600px; }
+            @media (max-width: 767px) {
+            .tag-network-logo {
+            height: 400px; } }
+            .tag-token-logo {
+            background-image: url(./assets/tag-token.svg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 550px; }
+            @media (max-width: 767px) {
+            .tag-token-logo {
+            height: 360px; } }
+            .tag-trade {
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 326px; }
+            @media (max-width: 767px) {
+            .tag-trade {
+            height: 200px; } }
+            .tag-trade-left {
+            background-image: url(./assets/tag-trade-left.svg); }
+            .tag-trade-right {
+            background-image: url(./assets/tag-trade-right.svg); }
+            .tag-contact {
+            background-image: url(./assets/background-box-50.svg);
+            background-size: 100% 320px;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 270px; }
+            @media (max-width: 767px) {
+            .tag-contact {
+            height: 240px; } }
+            .social-icons {
+            background-image: url(./assets/tag-contact-social-icon.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 80px;
+            height: 80px; }
+            .social2-icons {
+            background-image: url(./assets/tag-contact-social2-icon.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 80px;
+            height: 80px; }
+            .box {
+            background-image: url(./assets/background-box-30.svg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: auto;
+            min-height: 280px;
+            grid-gap: 12px;
+            gap: 12px; }
+            .footer {
+            position: relative;
+            width: 100%;
+            height: auto;
+            border-radius: 28px;
+            background-image: url(./assets/background-footer.svg);
+            background-size: 100% 512px;
+            background-repeat: no-repeat; }
+            .footer .copy-right {
+            width: 100%;
+            border-top: 1.16px solid #1F2B15; }
+            @media (max-width: 767px) {
+            .footer {
+            background-size: 100% 572px; } }
+            .font-weight-100 {
+            font-weight: 100; }
+            .font-weight-200 {
+            font-weight: 200; }
+            .font-weight-300 {
+            font-weight: 300; }
+            .font-weight-400 {
+            font-weight: 400; }
+            .font-weight-500 {
+            font-weight: 500; }
+            .font-weight-600 {
+            font-weight: 600; }
+            .font-weight-700 {
+            font-weight: 700; }
+            .font-weight-800 {
+            font-weight: 800; }
+            .font-weight-900 {
+            font-weight: 900; }
+            .font-weight-1000 {
+            font-weight: 1000; }
+            .font-size-1 {
+            font-size: 1px; }
+            @media (max-width: 767px) {
+            .font-size-sm-1 {
+            font-size: 1px !important; } }
+            .font-size-2 {
+            font-size: 2px; }
+            @media (max-width: 767px) {
+            .font-size-sm-2 {
+            font-size: 2px !important; } }
+            .font-size-3 {
+            font-size: 3px; }
+            @media (max-width: 767px) {
+            .font-size-sm-3 {
+            font-size: 3px !important; } }
+            .font-size-4 {
+            font-size: 4px; }
+            @media (max-width: 767px) {
+            .font-size-sm-4 {
+            font-size: 4px !important; } }
+            .font-size-5 {
+            font-size: 5px; }
+            @media (max-width: 767px) {
+            .font-size-sm-5 {
+            font-size: 5px !important; } }
+            .font-size-6 {
+            font-size: 6px; }
+            @media (max-width: 767px) {
+            .font-size-sm-6 {
+            font-size: 6px !important; } }
+            .font-size-7 {
+            font-size: 7px; }
+            @media (max-width: 767px) {
+            .font-size-sm-7 {
+            font-size: 7px !important; } }
+            .font-size-8 {
+            font-size: 8px; }
+            @media (max-width: 767px) {
+            .font-size-sm-8 {
+            font-size: 8px !important; } }
+            .font-size-9 {
+            font-size: 9px; }
+            @media (max-width: 767px) {
+            .font-size-sm-9 {
+            font-size: 9px !important; } }
+            .font-size-10 {
+            font-size: 10px; }
+            @media (max-width: 767px) {
+            .font-size-sm-10 {
+            font-size: 10px !important; } }
+            .font-size-11 {
+            font-size: 11px; }
+            @media (max-width: 767px) {
+            .font-size-sm-11 {
+            font-size: 11px !important; } }
+            .font-size-12 {
+            font-size: 12px; }
+            @media (max-width: 767px) {
+            .font-size-sm-12 {
+            font-size: 12px !important; } }
+            .font-size-13 {
+            font-size: 13px; }
+            @media (max-width: 767px) {
+            .font-size-sm-13 {
+            font-size: 13px !important; } }
+            .font-size-14 {
+            font-size: 14px; }
+            @media (max-width: 767px) {
+            .font-size-sm-14 {
+            font-size: 14px !important; } }
+            .font-size-15 {
+            font-size: 15px; }
+            @media (max-width: 767px) {
+            .font-size-sm-15 {
+            font-size: 15px !important; } }
+            .font-size-16 {
+            font-size: 16px; }
+            @media (max-width: 767px) {
+            .font-size-sm-16 {
+            font-size: 16px !important; } }
+            .font-size-17 {
+            font-size: 17px; }
+            @media (max-width: 767px) {
+            .font-size-sm-17 {
+            font-size: 17px !important; } }
+            .font-size-18 {
+            font-size: 18px; }
+            @media (max-width: 767px) {
+            .font-size-sm-18 {
+            font-size: 18px !important; } }
+            .font-size-19 {
+            font-size: 19px; }
+            @media (max-width: 767px) {
+            .font-size-sm-19 {
+            font-size: 19px !important; } }
+            .font-size-20 {
+            font-size: 20px; }
+            @media (max-width: 767px) {
+            .font-size-sm-20 {
+            font-size: 20px !important; } }
+            .font-size-21 {
+            font-size: 21px; }
+            @media (max-width: 767px) {
+            .font-size-sm-21 {
+            font-size: 21px !important; } }
+            .font-size-22 {
+            font-size: 22px; }
+            @media (max-width: 767px) {
+            .font-size-sm-22 {
+            font-size: 22px !important; } }
+            .font-size-23 {
+            font-size: 23px; }
+            @media (max-width: 767px) {
+            .font-size-sm-23 {
+            font-size: 23px !important; } }
+            .font-size-24 {
+            font-size: 24px; }
+            @media (max-width: 767px) {
+            .font-size-sm-24 {
+            font-size: 24px !important; } }
+            .font-size-25 {
+            font-size: 25px; }
+            @media (max-width: 767px) {
+            .font-size-sm-25 {
+            font-size: 25px !important; } }
+            .font-size-26 {
+            font-size: 26px; }
+            @media (max-width: 767px) {
+            .font-size-sm-26 {
+            font-size: 26px !important; } }
+            .font-size-27 {
+            font-size: 27px; }
+            @media (max-width: 767px) {
+            .font-size-sm-27 {
+            font-size: 27px !important; } }
+            .font-size-28 {
+            font-size: 28px; }
+            @media (max-width: 767px) {
+            .font-size-sm-28 {
+            font-size: 28px !important; } }
+            .font-size-29 {
+            font-size: 29px; }
+            @media (max-width: 767px) {
+            .font-size-sm-29 {
+            font-size: 29px !important; } }
+            .font-size-30 {
+            font-size: 30px; }
+            @media (max-width: 767px) {
+            .font-size-sm-30 {
+            font-size: 30px !important; } }
+            .font-size-31 {
+            font-size: 31px; }
+            @media (max-width: 767px) {
+            .font-size-sm-31 {
+            font-size: 31px !important; } }
+            .font-size-32 {
+            font-size: 32px; }
+            @media (max-width: 767px) {
+            .font-size-sm-32 {
+            font-size: 32px !important; } }
+            .font-size-33 {
+            font-size: 33px; }
+            @media (max-width: 767px) {
+            .font-size-sm-33 {
+            font-size: 33px !important; } }
+            .font-size-34 {
+            font-size: 34px; }
+            @media (max-width: 767px) {
+            .font-size-sm-34 {
+            font-size: 34px !important; } }
+            .font-size-35 {
+            font-size: 35px; }
+            @media (max-width: 767px) {
+            .font-size-sm-35 {
+            font-size: 35px !important; } }
+            .font-size-36 {
+            font-size: 36px; }
+            @media (max-width: 767px) {
+            .font-size-sm-36 {
+            font-size: 36px !important; } }
+            .font-size-37 {
+            font-size: 37px; }
+            @media (max-width: 767px) {
+            .font-size-sm-37 {
+            font-size: 37px !important; } }
+            .font-size-38 {
+            font-size: 38px; }
+            @media (max-width: 767px) {
+            .font-size-sm-38 {
+            font-size: 38px !important; } }
+            .font-size-39 {
+            font-size: 39px; }
+            @media (max-width: 767px) {
+            .font-size-sm-39 {
+            font-size: 39px !important; } }
+            .font-size-40 {
+            font-size: 40px; }
+            @media (max-width: 767px) {
+            .font-size-sm-40 {
+            font-size: 40px !important; } }
+            .font-size-41 {
+            font-size: 41px; }
+            @media (max-width: 767px) {
+            .font-size-sm-41 {
+            font-size: 41px !important; } }
+            .font-size-42 {
+            font-size: 42px; }
+            @media (max-width: 767px) {
+            .font-size-sm-42 {
+            font-size: 42px !important; } }
+            .font-size-43 {
+            font-size: 43px; }
+            @media (max-width: 767px) {
+            .font-size-sm-43 {
+            font-size: 43px !important; } }
+            .font-size-44 {
+            font-size: 44px; }
+            @media (max-width: 767px) {
+            .font-size-sm-44 {
+            font-size: 44px !important; } }
+            .font-size-45 {
+            font-size: 45px; }
+            @media (max-width: 767px) {
+            .font-size-sm-45 {
+            font-size: 45px !important; } }
+            .font-size-46 {
+            font-size: 46px; }
+            @media (max-width: 767px) {
+            .font-size-sm-46 {
+            font-size: 46px !important; } }
+            .font-size-47 {
+            font-size: 47px; }
+            @media (max-width: 767px) {
+            .font-size-sm-47 {
+            font-size: 47px !important; } }
+            .font-size-48 {
+            font-size: 48px; }
+            @media (max-width: 767px) {
+            .font-size-sm-48 {
+            font-size: 48px !important; } }
+            .font-size-49 {
+            font-size: 49px; }
+            @media (max-width: 767px) {
+            .font-size-sm-49 {
+            font-size: 49px !important; } }
+            .font-size-50 {
+            font-size: 50px; }
+            @media (max-width: 767px) {
+            .font-size-sm-50 {
+            font-size: 50px !important; } }
+            .font-size-51 {
+            font-size: 51px; }
+            @media (max-width: 767px) {
+            .font-size-sm-51 {
+            font-size: 51px !important; } }
+            .font-size-52 {
+            font-size: 52px; }
+            @media (max-width: 767px) {
+            .font-size-sm-52 {
+            font-size: 52px !important; } }
+            .font-size-53 {
+            font-size: 53px; }
+            @media (max-width: 767px) {
+            .font-size-sm-53 {
+            font-size: 53px !important; } }
+            .font-size-54 {
+            font-size: 54px; }
+            @media (max-width: 767px) {
+            .font-size-sm-54 {
+            font-size: 54px !important; } }
+            .font-size-55 {
+            font-size: 55px; }
+            @media (max-width: 767px) {
+            .font-size-sm-55 {
+            font-size: 55px !important; } }
+            .font-size-56 {
+            font-size: 56px; }
+            @media (max-width: 767px) {
+            .font-size-sm-56 {
+            font-size: 56px !important; } }
+            .font-size-57 {
+            font-size: 57px; }
+            @media (max-width: 767px) {
+            .font-size-sm-57 {
+            font-size: 57px !important; } }
+            .font-size-58 {
+            font-size: 58px; }
+            @media (max-width: 767px) {
+            .font-size-sm-58 {
+            font-size: 58px !important; } }
+            .font-size-59 {
+            font-size: 59px; }
+            @media (max-width: 767px) {
+            .font-size-sm-59 {
+            font-size: 59px !important; } }
+            .font-size-60 {
+            font-size: 60px; }
+            @media (max-width: 767px) {
+            .font-size-sm-60 {
+            font-size: 60px !important; } }
+            .font-size-61 {
+            font-size: 61px; }
+            @media (max-width: 767px) {
+            .font-size-sm-61 {
+            font-size: 61px !important; } }
+            .font-size-62 {
+            font-size: 62px; }
+            @media (max-width: 767px) {
+            .font-size-sm-62 {
+            font-size: 62px !important; } }
+            .font-size-63 {
+            font-size: 63px; }
+            @media (max-width: 767px) {
+            .font-size-sm-63 {
+            font-size: 63px !important; } }
+            .font-size-64 {
+            font-size: 64px; }
+            @media (max-width: 767px) {
+            .font-size-sm-64 {
+            font-size: 64px !important; } }
+            .font-size-65 {
+            font-size: 65px; }
+            @media (max-width: 767px) {
+            .font-size-sm-65 {
+            font-size: 65px !important; } }
+            .font-size-66 {
+            font-size: 66px; }
+            @media (max-width: 767px) {
+            .font-size-sm-66 {
+            font-size: 66px !important; } }
+            .font-size-67 {
+            font-size: 67px; }
+            @media (max-width: 767px) {
+            .font-size-sm-67 {
+            font-size: 67px !important; } }
+            .font-size-68 {
+            font-size: 68px; }
+            @media (max-width: 767px) {
+            .font-size-sm-68 {
+            font-size: 68px !important; } }
+            .font-size-69 {
+            font-size: 69px; }
+            @media (max-width: 767px) {
+            .font-size-sm-69 {
+            font-size: 69px !important; } }
+            .font-size-70 {
+            font-size: 70px; }
+            @media (max-width: 767px) {
+            .font-size-sm-70 {
+            font-size: 70px !important; } }
+            .font-size-71 {
+            font-size: 71px; }
+            @media (max-width: 767px) {
+            .font-size-sm-71 {
+            font-size: 71px !important; } }
+            .font-size-72 {
+            font-size: 72px; }
+            @media (max-width: 767px) {
+            .font-size-sm-72 {
+            font-size: 72px !important; } }
+            .gap-1 {
+            grid-gap: 1px;
+            gap: 1px; }
+            @media (max-width: 767px) {
+            .gap-sm-1 {
+            grid-gap: 1px !important;
+            gap: 1px !important; } }
+            .gap-2 {
+            grid-gap: 2px;
+            gap: 2px; }
+            @media (max-width: 767px) {
+            .gap-sm-2 {
+            grid-gap: 2px !important;
+            gap: 2px !important; } }
+            .gap-3 {
+            grid-gap: 3px;
+            gap: 3px; }
+            @media (max-width: 767px) {
+            .gap-sm-3 {
+            grid-gap: 3px !important;
+            gap: 3px !important; } }
+            .gap-4 {
+            grid-gap: 4px;
+            gap: 4px; }
+            @media (max-width: 767px) {
+            .gap-sm-4 {
+            grid-gap: 4px !important;
+            gap: 4px !important; } }
+            .gap-5 {
+            grid-gap: 5px;
+            gap: 5px; }
+            @media (max-width: 767px) {
+            .gap-sm-5 {
+            grid-gap: 5px !important;
+            gap: 5px !important; } }
+            .gap-6 {
+            grid-gap: 6px;
+            gap: 6px; }
+            @media (max-width: 767px) {
+            .gap-sm-6 {
+            grid-gap: 6px !important;
+            gap: 6px !important; } }
+            .gap-7 {
+            grid-gap: 7px;
+            gap: 7px; }
+            @media (max-width: 767px) {
+            .gap-sm-7 {
+            grid-gap: 7px !important;
+            gap: 7px !important; } }
+            .gap-8 {
+            grid-gap: 8px;
+            gap: 8px; }
+            @media (max-width: 767px) {
+            .gap-sm-8 {
+            grid-gap: 8px !important;
+            gap: 8px !important; } }
+            .gap-9 {
+            grid-gap: 9px;
+            gap: 9px; }
+            @media (max-width: 767px) {
+            .gap-sm-9 {
+            grid-gap: 9px !important;
+            gap: 9px !important; } }
+            .gap-10 {
+            grid-gap: 10px;
+            gap: 10px; }
+            @media (max-width: 767px) {
+            .gap-sm-10 {
+            grid-gap: 10px !important;
+            gap: 10px !important; } }
+            .gap-11 {
+            grid-gap: 11px;
+            gap: 11px; }
+            @media (max-width: 767px) {
+            .gap-sm-11 {
+            grid-gap: 11px !important;
+            gap: 11px !important; } }
+            .gap-12 {
+            grid-gap: 12px;
+            gap: 12px; }
+            @media (max-width: 767px) {
+            .gap-sm-12 {
+            grid-gap: 12px !important;
+            gap: 12px !important; } }
+            .gap-13 {
+            grid-gap: 13px;
+            gap: 13px; }
+            @media (max-width: 767px) {
+            .gap-sm-13 {
+            grid-gap: 13px !important;
+            gap: 13px !important; } }
+            .gap-14 {
+            grid-gap: 14px;
+            gap: 14px; }
+            @media (max-width: 767px) {
+            .gap-sm-14 {
+            grid-gap: 14px !important;
+            gap: 14px !important; } }
+            .gap-15 {
+            grid-gap: 15px;
+            gap: 15px; }
+            @media (max-width: 767px) {
+            .gap-sm-15 {
+            grid-gap: 15px !important;
+            gap: 15px !important; } }
+            .gap-16 {
+            grid-gap: 16px;
+            gap: 16px; }
+            @media (max-width: 767px) {
+            .gap-sm-16 {
+            grid-gap: 16px !important;
+            gap: 16px !important; } }
+            .gap-17 {
+            grid-gap: 17px;
+            gap: 17px; }
+            @media (max-width: 767px) {
+            .gap-sm-17 {
+            grid-gap: 17px !important;
+            gap: 17px !important; } }
+            .gap-18 {
+            grid-gap: 18px;
+            gap: 18px; }
+            @media (max-width: 767px) {
+            .gap-sm-18 {
+            grid-gap: 18px !important;
+            gap: 18px !important; } }
+            .gap-19 {
+            grid-gap: 19px;
+            gap: 19px; }
+            @media (max-width: 767px) {
+            .gap-sm-19 {
+            grid-gap: 19px !important;
+            gap: 19px !important; } }
+            .gap-20 {
+            grid-gap: 20px;
+            gap: 20px; }
+            @media (max-width: 767px) {
+            .gap-sm-20 {
+            grid-gap: 20px !important;
+            gap: 20px !important; } }
+            .gap-21 {
+            grid-gap: 21px;
+            gap: 21px; }
+            @media (max-width: 767px) {
+            .gap-sm-21 {
+            grid-gap: 21px !important;
+            gap: 21px !important; } }
+            .gap-22 {
+            grid-gap: 22px;
+            gap: 22px; }
+            @media (max-width: 767px) {
+            .gap-sm-22 {
+            grid-gap: 22px !important;
+            gap: 22px !important; } }
+            .gap-23 {
+            grid-gap: 23px;
+            gap: 23px; }
+            @media (max-width: 767px) {
+            .gap-sm-23 {
+            grid-gap: 23px !important;
+            gap: 23px !important; } }
+            .gap-24 {
+            grid-gap: 24px;
+            gap: 24px; }
+            @media (max-width: 767px) {
+            .gap-sm-24 {
+            grid-gap: 24px !important;
+            gap: 24px !important; } }
+            .gap-25 {
+            grid-gap: 25px;
+            gap: 25px; }
+            @media (max-width: 767px) {
+            .gap-sm-25 {
+            grid-gap: 25px !important;
+            gap: 25px !important; } }
+            .gap-26 {
+            grid-gap: 26px;
+            gap: 26px; }
+            @media (max-width: 767px) {
+            .gap-sm-26 {
+            grid-gap: 26px !important;
+            gap: 26px !important; } }
+            .gap-27 {
+            grid-gap: 27px;
+            gap: 27px; }
+            @media (max-width: 767px) {
+            .gap-sm-27 {
+            grid-gap: 27px !important;
+            gap: 27px !important; } }
+            .gap-28 {
+            grid-gap: 28px;
+            gap: 28px; }
+            @media (max-width: 767px) {
+            .gap-sm-28 {
+            grid-gap: 28px !important;
+            gap: 28px !important; } }
+            .gap-29 {
+            grid-gap: 29px;
+            gap: 29px; }
+            @media (max-width: 767px) {
+            .gap-sm-29 {
+            grid-gap: 29px !important;
+            gap: 29px !important; } }
+            .gap-30 {
+            grid-gap: 30px;
+            gap: 30px; }
+            @media (max-width: 767px) {
+            .gap-sm-30 {
+            grid-gap: 30px !important;
+            gap: 30px !important; } }
+            .gap-31 {
+            grid-gap: 31px;
+            gap: 31px; }
+            @media (max-width: 767px) {
+            .gap-sm-31 {
+            grid-gap: 31px !important;
+            gap: 31px !important; } }
+            .gap-32 {
+            grid-gap: 32px;
+            gap: 32px; }
+            @media (max-width: 767px) {
+            .gap-sm-32 {
+            grid-gap: 32px !important;
+            gap: 32px !important; } }
+            .gap-33 {
+            grid-gap: 33px;
+            gap: 33px; }
+            @media (max-width: 767px) {
+            .gap-sm-33 {
+            grid-gap: 33px !important;
+            gap: 33px !important; } }
+            .gap-34 {
+            grid-gap: 34px;
+            gap: 34px; }
+            @media (max-width: 767px) {
+            .gap-sm-34 {
+            grid-gap: 34px !important;
+            gap: 34px !important; } }
+            .gap-35 {
+            grid-gap: 35px;
+            gap: 35px; }
+            @media (max-width: 767px) {
+            .gap-sm-35 {
+            grid-gap: 35px !important;
+            gap: 35px !important; } }
+            .gap-36 {
+            grid-gap: 36px;
+            gap: 36px; }
+            @media (max-width: 767px) {
+            .gap-sm-36 {
+            grid-gap: 36px !important;
+            gap: 36px !important; } }
+            .gap-37 {
+            grid-gap: 37px;
+            gap: 37px; }
+            @media (max-width: 767px) {
+            .gap-sm-37 {
+            grid-gap: 37px !important;
+            gap: 37px !important; } }
+            .gap-38 {
+            grid-gap: 38px;
+            gap: 38px; }
+            @media (max-width: 767px) {
+            .gap-sm-38 {
+            grid-gap: 38px !important;
+            gap: 38px !important; } }
+            .gap-39 {
+            grid-gap: 39px;
+            gap: 39px; }
+            @media (max-width: 767px) {
+            .gap-sm-39 {
+            grid-gap: 39px !important;
+            gap: 39px !important; } }
+            .gap-40 {
+            grid-gap: 40px;
+            gap: 40px; }
+            @media (max-width: 767px) {
+            .gap-sm-40 {
+            grid-gap: 40px !important;
+            gap: 40px !important; } }
+            .gap-41 {
+            grid-gap: 41px;
+            gap: 41px; }
+            @media (max-width: 767px) {
+            .gap-sm-41 {
+            grid-gap: 41px !important;
+            gap: 41px !important; } }
+            .gap-42 {
+            grid-gap: 42px;
+            gap: 42px; }
+            @media (max-width: 767px) {
+            .gap-sm-42 {
+            grid-gap: 42px !important;
+            gap: 42px !important; } }
+            .gap-43 {
+            grid-gap: 43px;
+            gap: 43px; }
+            @media (max-width: 767px) {
+            .gap-sm-43 {
+            grid-gap: 43px !important;
+            gap: 43px !important; } }
+            .gap-44 {
+            grid-gap: 44px;
+            gap: 44px; }
+            @media (max-width: 767px) {
+            .gap-sm-44 {
+            grid-gap: 44px !important;
+            gap: 44px !important; } }
+            .gap-45 {
+            grid-gap: 45px;
+            gap: 45px; }
+            @media (max-width: 767px) {
+            .gap-sm-45 {
+            grid-gap: 45px !important;
+            gap: 45px !important; } }
+            .gap-46 {
+            grid-gap: 46px;
+            gap: 46px; }
+            @media (max-width: 767px) {
+            .gap-sm-46 {
+            grid-gap: 46px !important;
+            gap: 46px !important; } }
+            .gap-47 {
+            grid-gap: 47px;
+            gap: 47px; }
+            @media (max-width: 767px) {
+            .gap-sm-47 {
+            grid-gap: 47px !important;
+            gap: 47px !important; } }
+            .gap-48 {
+            grid-gap: 48px;
+            gap: 48px; }
+            @media (max-width: 767px) {
+            .gap-sm-48 {
+            grid-gap: 48px !important;
+            gap: 48px !important; } }
+            .gap-49 {
+            grid-gap: 49px;
+            gap: 49px; }
+            @media (max-width: 767px) {
+            .gap-sm-49 {
+            grid-gap: 49px !important;
+            gap: 49px !important; } }
+            .gap-50 {
+            grid-gap: 50px;
+            gap: 50px; }
+            @media (max-width: 767px) {
+            .gap-sm-50 {
+            grid-gap: 50px !important;
+            gap: 50px !important; } }
+            .gap-51 {
+            grid-gap: 51px;
+            gap: 51px; }
+            @media (max-width: 767px) {
+            .gap-sm-51 {
+            grid-gap: 51px !important;
+            gap: 51px !important; } }
+            .gap-52 {
+            grid-gap: 52px;
+            gap: 52px; }
+            @media (max-width: 767px) {
+            .gap-sm-52 {
+            grid-gap: 52px !important;
+            gap: 52px !important; } }
+            .gap-53 {
+            grid-gap: 53px;
+            gap: 53px; }
+            @media (max-width: 767px) {
+            .gap-sm-53 {
+            grid-gap: 53px !important;
+            gap: 53px !important; } }
+            .gap-54 {
+            grid-gap: 54px;
+            gap: 54px; }
+            @media (max-width: 767px) {
+            .gap-sm-54 {
+            grid-gap: 54px !important;
+            gap: 54px !important; } }
+            .gap-55 {
+            grid-gap: 55px;
+            gap: 55px; }
+            @media (max-width: 767px) {
+            .gap-sm-55 {
+            grid-gap: 55px !important;
+            gap: 55px !important; } }
+            .gap-56 {
+            grid-gap: 56px;
+            gap: 56px; }
+            @media (max-width: 767px) {
+            .gap-sm-56 {
+            grid-gap: 56px !important;
+            gap: 56px !important; } }
+            .gap-57 {
+            grid-gap: 57px;
+            gap: 57px; }
+            @media (max-width: 767px) {
+            .gap-sm-57 {
+            grid-gap: 57px !important;
+            gap: 57px !important; } }
+            .gap-58 {
+            grid-gap: 58px;
+            gap: 58px; }
+            @media (max-width: 767px) {
+            .gap-sm-58 {
+            grid-gap: 58px !important;
+            gap: 58px !important; } }
+            .gap-59 {
+            grid-gap: 59px;
+            gap: 59px; }
+            @media (max-width: 767px) {
+            .gap-sm-59 {
+            grid-gap: 59px !important;
+            gap: 59px !important; } }
+            .gap-60 {
+            grid-gap: 60px;
+            gap: 60px; }
+            @media (max-width: 767px) {
+            .gap-sm-60 {
+            grid-gap: 60px !important;
+            gap: 60px !important; } }
+            .gap-61 {
+            grid-gap: 61px;
+            gap: 61px; }
+            @media (max-width: 767px) {
+            .gap-sm-61 {
+            grid-gap: 61px !important;
+            gap: 61px !important; } }
+            .gap-62 {
+            grid-gap: 62px;
+            gap: 62px; }
+            @media (max-width: 767px) {
+            .gap-sm-62 {
+            grid-gap: 62px !important;
+            gap: 62px !important; } }
+            .gap-63 {
+            grid-gap: 63px;
+            gap: 63px; }
+            @media (max-width: 767px) {
+            .gap-sm-63 {
+            grid-gap: 63px !important;
+            gap: 63px !important; } }
+            .gap-64 {
+            grid-gap: 64px;
+            gap: 64px; }
+            @media (max-width: 767px) {
+            .gap-sm-64 {
+            grid-gap: 64px !important;
+            gap: 64px !important; } }
+            .gap-65 {
+            grid-gap: 65px;
+            gap: 65px; }
+            @media (max-width: 767px) {
+            .gap-sm-65 {
+            grid-gap: 65px !important;
+            gap: 65px !important; } }
+            .gap-66 {
+            grid-gap: 66px;
+            gap: 66px; }
+            @media (max-width: 767px) {
+            .gap-sm-66 {
+            grid-gap: 66px !important;
+            gap: 66px !important; } }
+            .gap-67 {
+            grid-gap: 67px;
+            gap: 67px; }
+            @media (max-width: 767px) {
+            .gap-sm-67 {
+            grid-gap: 67px !important;
+            gap: 67px !important; } }
+            .gap-68 {
+            grid-gap: 68px;
+            gap: 68px; }
+            @media (max-width: 767px) {
+            .gap-sm-68 {
+            grid-gap: 68px !important;
+            gap: 68px !important; } }
+            .gap-69 {
+            grid-gap: 69px;
+            gap: 69px; }
+            @media (max-width: 767px) {
+            .gap-sm-69 {
+            grid-gap: 69px !important;
+            gap: 69px !important; } }
+            .gap-70 {
+            grid-gap: 70px;
+            gap: 70px; }
+            @media (max-width: 767px) {
+            .gap-sm-70 {
+            grid-gap: 70px !important;
+            gap: 70px !important; } }
+            .gap-71 {
+            grid-gap: 71px;
+            gap: 71px; }
+            @media (max-width: 767px) {
+            .gap-sm-71 {
+            grid-gap: 71px !important;
+            gap: 71px !important; } }
+            .gap-72 {
+            grid-gap: 72px;
+            gap: 72px; }
+            @media (max-width: 767px) {
+            .gap-sm-72 {
+            grid-gap: 72px !important;
+            gap: 72px !important; } }
+            .gap-73 {
+            grid-gap: 73px;
+            gap: 73px; }
+            @media (max-width: 767px) {
+            .gap-sm-73 {
+            grid-gap: 73px !important;
+            gap: 73px !important; } }
+            .gap-74 {
+            grid-gap: 74px;
+            gap: 74px; }
+            @media (max-width: 767px) {
+            .gap-sm-74 {
+            grid-gap: 74px !important;
+            gap: 74px !important; } }
+            .gap-75 {
+            grid-gap: 75px;
+            gap: 75px; }
+            @media (max-width: 767px) {
+            .gap-sm-75 {
+            grid-gap: 75px !important;
+            gap: 75px !important; } }
+            .gap-76 {
+            grid-gap: 76px;
+            gap: 76px; }
+            @media (max-width: 767px) {
+            .gap-sm-76 {
+            grid-gap: 76px !important;
+            gap: 76px !important; } }
+            .gap-77 {
+            grid-gap: 77px;
+            gap: 77px; }
+            @media (max-width: 767px) {
+            .gap-sm-77 {
+            grid-gap: 77px !important;
+            gap: 77px !important; } }
+            .gap-78 {
+            grid-gap: 78px;
+            gap: 78px; }
+            @media (max-width: 767px) {
+            .gap-sm-78 {
+            grid-gap: 78px !important;
+            gap: 78px !important; } }
+            .gap-79 {
+            grid-gap: 79px;
+            gap: 79px; }
+            @media (max-width: 767px) {
+            .gap-sm-79 {
+            grid-gap: 79px !important;
+            gap: 79px !important; } }
+            .gap-80 {
+            grid-gap: 80px;
+            gap: 80px; }
+            @media (max-width: 767px) {
+            .gap-sm-80 {
+            grid-gap: 80px !important;
+            gap: 80px !important; } }
+            .tag-arrow {
+            width: 4px;
+            height: 12px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(./assets/vector-left.svg); }
+            .tag-arrow.right {
+            background-image: url(./assets/vector-right.svg); }
+            .sub-details {
+            color: #B6B1C8; }
+            @media (max-width: 767px) {
+            h5 {
+            font-size: 16px; } }
+        </style>
+        <script charset="utf-8" src="/main.ad538e326824be124a32.hot-update.js"></script><script charset="utf-8" src="/main.6935b63ad474a66a1fd4.hot-update.js"></script><script charset="utf-8" src="/main.fe5aac03aa46e459f935.hot-update.js"></script><script charset="utf-8" src="/main.92ec48dd2aa517580565.hot-update.js"></script><script charset="utf-8" src="/main.40e2c82b7d166129117f.hot-update.js"></script><script charset="utf-8" src="/main.671fd905397d7f0e3e15.hot-update.js"></script><script charset="utf-8" src="/main.bef512b7d6c6d9bca84a.hot-update.js"></script><script charset="utf-8" src="/main.a40ba16a0a1989bead56.hot-update.js"></script><script charset="utf-8" src="/main.ed335aa12feed6686268.hot-update.js"></script><script charset="utf-8" src="/main.0dfa79a4ab3e206ca5c0.hot-update.js"></script><script charset="utf-8" src="/main.39998e97014f56b86ce9.hot-update.js"></script><script charset="utf-8" src="/main.8844f62f43a3c9a8ac1e.hot-update.js"></script><script charset="utf-8" src="/main.0b7b738fde9917757cda.hot-update.js"></script><script charset="utf-8" src="/main.9f2733f0418c686ac7de.hot-update.js"></script><script charset="utf-8" src="/main.d2d1c82f7603900213f7.hot-update.js"></script><script charset="utf-8" src="/main.3f4365c9e50809752fe0.hot-update.js"></script><script charset="utf-8" src="/main.537b2683c8f36eb1306e.hot-update.js"></script><script charset="utf-8" src="/main.ec619be97f7730aa06bd.hot-update.js"></script>
+    </head>
+    <body cz-shortcut-listen="true">
+        <noscript>
+            You need to enable JavaScript to run this app.
+        </noscript>
+        <div id="root">
+            <div class="container d-flex flex-row justify-content-md-between justify-content-center mt-3">
+                <div class="d-sm-block d-md-none nav-menu-mobile">
+                    <a class="nav-link dropdown-toggle icon" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bars"></i></a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item nav-selected" href="#">About us</a><a class="dropdown-item" href="#">Document</a><a class="dropdown-item" href="#">Network</a><a class="dropdown-item" href="#">Token</a><a class="dropdown-item" href="#">Exchange</a><a class="dropdown-item" href="#">Contact</a><a class="dropdown-item" href="#">Blog</a></div>
+                </div>
+                <div class="header-logo"></div>
+                <div class="d-none d-sm-none d-md-block d-md-flex justify-content-center align-items-center header-nav gap-16 gap-sm-8"><a class="nav-selected">About us</a><a>Document</a><a>Network</a><a>Token</a><a>Exchange</a><a>Contact</a><a>Blog</a></div>
+                <div class="d-none d-xs-none d-sm-none d-lg-flex">
+                    <div class="d-flex justify-content-center align-items-center btn app-button">Launch App</div>
+                </div>
+            </div>
+            <div class="container position-relative">
+                <div class="title-logo"></div>
+                <div class="container-gap">
+                    <h1 class="container text-center text-title d-flex flex-column"><span>Join Crypto <span class="text-hight-light">Arbitrage Algorithm</span></span><span>The Best Trading Strategy</span></h1>
+                    <h5 class="text-center font-weight-medium">Turbocharge your bot trading with GAMA X - the AI bot that redefines productivity in the trading realm. Unleash the power of AI for unparalleled trading success!</h5>
+                </div>
+                <div class="main-logo container-gap">
+                    <img src="./assets/main-brainwave-hero-app.svg" width="100%">
+                    <div class="position-absolute block-coint">
+                        <div class="d-flex align-items-center d-flex gap-8 text-white font-weight-700">
+                            <div class="d-flex justify-content-center align-items-center commmand commmand-sell">Sell</div>
+                            <div>ETH / USDT</div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between font-size-12">
+                            <div>Unealized PNL (USDT)</div>
+                            <div>ROE</div>
+                        </div>
+                        <div class="coint-price font-weight-700">1,220.17</div>
+                    </div>
+                    <div class="position-absolute block-coint block-price">
+                        <div class="d-flex align-items-center d-flex gap-8 text-white font-weight-700">
+                            <div class="d-flex justify-content-center align-items-center commmand commmand-buy">Buy</div>
+                            <div>BTC / USDT</div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between font-size-12">
+                            <div>Unealized PNL (USDT)</div>
+                            <div>ROE</div>
+                        </div>
+                        <div class="coint-price font-weight-700">1,050.05</div>
+                    </div>
+                </div>
+                <div class="text-white container-gap">
+                    <h2 class="text-center">Our Top Partners</h2>
+                    <div class="d-flex d-flex flex-row justify-content-center flex-wrap"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAACICAYAAAAWLwXUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAhtSURBVHgB7d2Ndas2GIBhuacDeIOyQb1B6QTNBqUT3HSCuBPcdAKnE+RugDuBfSfAnSDpBF/RRaoFkYTAkDjkfc4hdvgREj9CSMIoBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgJiV+qBEJK8/NvXwk/lcm0F7roeTGb7Ww361Wu0VgI+nzizW9XBXD08yXFUPu3rIFIDlMxnGZ5nOjgwEWLD6BP8k40oYfap6KBSAZZFhpYyqHg71UJrvqT4rAO+fNLcmZc8Jr6dvpakkDYWTJ2YiOsNZKwDvV30SH3syjHxAWIWkKRWA90nCtye6nuNWDSRN6SW1joTbFuC9iZQOKrmgFaRe9kHSDc6cALwRnTGIvz7iokzDhH3rCfc+sD5dOqG+40JmfxZmYHtiHoFSwZNM0N+iDuPGE/bWHNy+2xhuWS4kTcW0lSlgauYE9pnktqFzEFs7M+02sG6ukhcg47hu36ll2HrGnVar1b2az7/6j1nH3jOdug4s1lIyjp88435T0/GVHp6d7394pn9SwEJ9r945afpkZJ3Rp4mfZt14xh3tF72uOh77+mvuTNfNuPmU8ajDs0/xPtfhHi+d18yjh0w1GeGxL75OuHobnwLzrNV5m+kwn51pmV2fjpeZ98aM09tyqwYyYeZqQDo88c3N8muz/JduWhK2Ta7OT1qfTDhHhetjKilnqdtw1lF61rF5g3jYdfS23Mi5xWfnmbaRcM9avVyREO42Mk+wfkLOldg78bSEpYThzJONTYcTRuhZpkrOLTvf/lfx9FaBeByEOprrU++UL56dlauJiL/itfLM56tA/aIm1FnHTWQ+txWom8FtOidKKc1JXHbG3wXCrsz0bWI8s840N+OwYVVm/YeUMKZIhwnD7Syol3k0YRyceNnK7yoQxl0njNKJhzt+o3A9nJ38PzUh8Tfz7gLzdlVqYs4BWar+OFed8e4VXn9mnumPTvxzT9h2+W1k/SkZh41DPiKMbjo2I9JRONN1n5x1Z7rOfJ9i+1LaF5WjJww3nvTvuSbyspg52ckq4WbePDB/1ZnvSU1MzlfA4IEo521SdMa7J20WWFbXzdjMuPRMr8y0rQrHMTXjyEeGcduXDjNfSjoeE+PgyzhKOy2yLzJnf2wVroO8NMnDZuYEqoaELzOXfpx4Wbee6UXkhKvM+F3POvKEMLYjl7cZx0FdHoch6dgExuc9YZRmPl/pzSp6wtia+Sa/kLyVpTTHui4uDkpz9dBXoswz+ffIos9qZqaFYm/+/cUzi6372LutHubEycy/f6k4tyUgV/MYta3MvsnMvynpsOvJnfE2E3lOaH35Ghjv3h711WXtzedaFlLXsYSMo3sAbuSC1gxzddsr/wnzZ0/zWqbicZuK7TeSi1NENt9tZtI9qdwMNdpEaDKnk/k3U9fFPfFOsRlNOuw+cNO/TlneOPbE4+Q2NyeEkakFWGLGoena8p0MbAYzRU5dhP7RM/mk/D1UXZlnmTm4V9LCGW9LG/pK+hBaOOFAX5KT+fzBM+1VtkNney+ignQJGUeoKFnUQ2UykDy0sDR1BrqyTddd6Htm34491cPPsRMusI5/1AxMPGyJwr1d+dV8RovOQzPUKzP0ZLf707cvMtUvuzQe0q44PakFePc9R1VzW/FLZHqhB2nqKfdm3Ek1B4QdYvS8P4d6STp8965HNR+dOehu7fZ2xfZ+1Hz3/ifn+0ZFDuBOPcKYNMx5VT0531PSsfEsZ7/rCs51Twls0xOPoWF8pNLe9RJ/x6uplKlXZ/G3wORqRs46da29bU2pEubva424qGVGIs2+zrSyJw6xVpXSjH9UI9Ih7ZapbWR5t+Wk26oSbd1S/jRP3q8HF5DpX38w6GcGxZ95zX6QyLmZr5TzybRNmF/bBObRJ0tl5vF1V39wtlHmmb7pbIcssPwlGYebjjywvNucXkbS4Q3DLH+M7U9nmwd/90Xamc9W4XqI/zmRMZ5MWIOK2uIvbezUzKR91bOynvltXPVn0ZmuT9ajsy0yTxitTlHSXNUzM9yZ5Q6h+Mg0GUdfOjbSPumznm3xbX9JU9dVSPttf/bYCvUcfXLikXnS4MZzERWjiyH+E0i7NwdDKf5SiT3I781OHrxjpXlIyidTr0Daz0T0dn6Tlw+W2ecruuOKxHV26XBuQttBJsg4BqRDetKRSfz1F4X03AKaeLrHln03T6u7uvCg23WS5uTvenHVlPPVcYqOYpn4M6TZSxtOHG5TTpLOMjreD+JXSkInJbO9u2nfSZOJx0oLk2QcU6XDhFOYcEoz3NtlJa3uKBN/ZvokvC70ukn4NQbVHDtOZvxx5IHxKJx1D73Fsif5jYwvcW3M8GbF8CnSEQk7+nRsJB5vuk0wgIR//7Oa8mSWeBG3UK9Izj8r8GqlnKVIOSYk8dkavHPiv2XRRr2QyRN+7CXW9+oVSbvGPldIJufH5mPNytEWJiyM9Ffe5WogaYqgsXDn7OzlxkMXgbfSrmOgf8BA0r7AHMS5xZF2C5HIRK/ZwJWT9m9KxDKQW+n/TYg7SXuB9avcz8rLElXFQT2OpDXj60zjRuHjkPBti09lMoCDpL2h3nrt2xPbvPwoI/qcoE2aEtyDZ58f2L4fmDStDpVMb5I6EwBXSuLt/WO8+I1KAAvlZCCVDDeqOzqwRCv1QUlTKaoH/aM9mTq/jEezvxylW0r+VgNf8AMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgY/sPGD+R1vSmuHMAAAAASUVORK5CYII=" width="270" height="136"><img src="data:image/png;base64,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" width="270" height="136"><img src="data:image/png;base64,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" width="270" height="136"><img src="data:image/png;base64,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" width="270" height="136"></div>
+                </div>
+                <hr>
+                <div class="d-flex flex-row justify-content-between container-gap mx-auto gap-16 flex-md-row flex-column">
+                    <div class="d-flex flex-column col-md-6 col-xs-12 gap-16">
+                        <div class="d-flex flex-column gap-12 tag">
+                            <div class="d-flex align-items-center gap-12 font-size-12 text-uppercase">
+                                <div class="tag-arrow"></div>
+                                ABOUT GAMAX ALGORITHM
+                                <div class="tag-arrow right"></div>
+                            </div>
+                            <h2 class="text-white font-size-48 font-size-sm-32">The Best <span class="text-hight-light">Arbitrage Platform</span> That Offers Optimal Profit</h2>
+                        </div>
+                        <p class="sub-details font-size-16 font-weight-400">Bunnybot is a high-frequency arbitrage trading algorithm on Cryptocurrency. We offer users a fully operational long-term investment platform. It plans to leverage blockchain technology to ensure a seamless investment experience and wants to help investors unfreeze tied-up investment deposits. You can withdraw and deposit through your wallet easily.</p>
+                        <div class="d-flex justify-content-center align-items-center btn app-button">GET STARTED</div>
+                    </div>
+                    <div class="d-flex col-md-6 col-xs-12">
+                        <div class="region-box-logo"></div>
+                    </div>
+                </div>
+                <div class="mb-5 container-gap">
+                    <div class="d-flex flex-column gap-12 tag text-center">
+                        <h2 class="text-white font-size-48 font-size-sm-32">Why Choose Arbitrage <br>Platform <span class="text-hight-light">GamaX</span> </h2>
+                    </div>
+                    <div class="d-flex flex-wrap container-gap">
+                        <div class="d-flex flex-column col-sm-6 col-md-4 col-xs-12">
+                            <div class="box py-2 px-3">
+                                <img alt="" src="./assets/security-icon.png" width="150" height="150">
+                                <div>
+                                    <h4 class="text-white font-size-20 font-size-sm-15">BlockchainSecurity</h4>
+                                    <div>Best security technology Trade anywhere on the world</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column col-sm-6 col-md-4 col-xs-12">
+                            <div class="box py-2 px-3">
+                                <img alt="" src="data:image/png;base64,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" width="150" height="150">
+                                <div>
+                                    <h4 class="text-white font-size-20 font-size-sm-15">Protect the identity</h4>
+                                    <div>Your identity is protected You are responsible for your profits</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column col-sm-6 col-md-4 col-xs-12">
+                            <div class="box py-2 px-3">
+                                <img alt="" src="data:image/png;base64,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" width="150" height="150">
+                                <div>
+                                    <h4 class="text-white font-size-20 font-size-sm-15">Lifetimetransaction</h4>
+                                    <div>Transactions exist forever on the internet space</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column col-sm-6 col-md-4 col-xs-12">
+                            <div class="box py-2 px-3">
+                                <img alt="" src="./assets/safety-icon.png" width="150" height="150">
+                                <div>
+                                    <h4 class="text-white font-size-20 font-size-sm-15">Safety profit</h4>
+                                    <div>Arbitrage trading is safe profit Balance and profit are secure</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column col-sm-6 col-md-4 col-xs-12">
+                            <div class="box py-2 px-3">
+                                <img alt="" src="./assets/invest-icon.png" width="150" height="150">
+                                <div>
+                                    <h4 class="text-white font-size-20 font-size-sm-15">Invest &amp; Withdraw easily</h4>
+                                    <div>Invest or Withdraw your balance easily through your wallet</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-row justify-content-between container-gap mx-auto gap-16 flex-md-row flex-column-reverse">
+                    <div class="col-md-6 col-xs-12 tag-paper-logo"></div>
+                    <div class="d-flex flex-column col-md-6 col-xs-12 gap-16">
+                        <div class="d-flex flex-column gap-12 tag">
+                            <div class="d-flex align-items-center gap-12 font-size-12 text-uppercase">
+                                <div class="tag-arrow"></div>
+                                TECHNICAL PAPER
+                                <div class="tag-arrow right"></div>
+                            </div>
+                            <h2 class="text-white font-size-48 font-size-sm-32">Read <span class="text-hight-light">GamaX</span> <br>Documents</h2>
+                        </div>
+                        <div class="d-flex flex-column gap-12 mb-4">
+                            <div class="d-flex gap-20 pb-3">
+                                <div><img src="./assets/tick-icon.svg" width="24" height="24"></div>
+                                <div class="d-flex flex-row justify-content-between d-flex font-size-16 col-8 text-white font-weight-400">
+                                    <div>Technical Paper</div>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-20 pb-3">
+                                <div><img src="./assets/tick-icon.svg" width="24" height="24"></div>
+                                <div class="d-flex flex-row justify-content-between d-flex font-size-16 col-8 text-white font-weight-400">
+                                    <div>Privacy &amp; Policy</div>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-20 pb-3">
+                                <div><img src="./assets/tick-icon.svg" width="24" height="24"></div>
+                                <div class="d-flex flex-row justify-content-between d-flex font-size-16 col-8 text-white font-weight-400">
+                                    <div>Risk Warning</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center btn app-button">VIEW DOCUMENT</div>
+                    </div>
+                </div>
+                <div class="d-flex flex-row justify-content-between container-gap mx-auto gap-16 flex-md-row flex-column">
+                    <div class="d-flex flex-column col-md-6 col-xs-12 gap-16">
+                        <div class="d-flex flex-column gap-12 tag">
+                            <div class="d-flex align-items-center gap-12 font-size-12 text-uppercase">
+                                <div class="tag-arrow"></div>
+                                DEVELOPER REVENUE STRUCTURE
+                                <div class="tag-arrow right"></div>
+                            </div>
+                            <h2 class="text-white font-size-48 font-size-sm-32">Network Structure <span class="text-hight-light"></span> </h2>
+                        </div>
+                        <div class="d-flex flex-column gap-12 mb-4">
+                            <div class="d-flex gap-20 pb-3">
+                                <div><img src="./assets/tick-icon.svg" width="24" height="24"></div>
+                                <div class="d-flex flex-row justify-content-between d-flex font-size-16 col-8 text-white font-weight-400">
+                                    <div>Investment</div>
+                                    <div class="text-hight-light">30%</div>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-20 pb-3">
+                                <div><img src="./assets/tick-icon.svg" width="24" height="24"></div>
+                                <div class="d-flex flex-row justify-content-between d-flex font-size-16 col-8 text-white font-weight-400">
+                                    <div>Network Revenue</div>
+                                    <div class="text-hight-light">20%</div>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-20 pb-3">
+                                <div><img src="./assets/tick-icon.svg" width="24" height="24"></div>
+                                <div class="d-flex flex-row justify-content-between d-flex font-size-16 col-8 text-white font-weight-400">
+                                    <div>Network Member</div>
+                                    <div class="text-hight-light">5%</div>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-20 pb-3">
+                                <div><img src="./assets/tick-icon.svg" width="24" height="24"></div>
+                                <div class="d-flex flex-row justify-content-between d-flex font-size-16 col-8 text-white font-weight-400">
+                                    <div>Investor Commission</div>
+                                    <div class="text-hight-light">9%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center btn app-button">VIEW DETAIL</div>
+                    </div>
+                    <div class="col-md-6 col-xs-12 tag-developer-logo"></div>
+                </div>
+                <div class="d-flex flex-row justify-content-between container-gap mx-auto gap-16 flex-md-row flex-column-reverse">
+                    <div class="col-md-6 col-xs-12 tag-network-logo"></div>
+                    <div class="d-flex flex-column col-md-6 col-xs-12 gap-16">
+                        <div class="d-flex flex-column gap-12 tag">
+                            <div class="d-flex align-items-center gap-12 font-size-12 text-uppercase">
+                                <div class="tag-arrow"></div>
+                                Network
+                                <div class="tag-arrow right"></div>
+                            </div>
+                            <h2 class="text-white font-size-48 font-size-sm-32">Join &amp; Earn <span class="text-hight-light"><br>Developer Network</span> </h2>
+                        </div>
+                        <div class="d-flex flex-column gap-12 mb-4">
+                            <div class="d-flex gap-20 pb-3">
+                                <div><img src="./assets/tick-icon.svg" width="24" height="24"></div>
+                                <div class="d-flex flex-row justify-content-between d-flex font-size-16 col-8 text-white font-weight-400">
+                                    <div>Build On Blockchain Technology</div>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-20 pb-3">
+                                <div><img src="./assets/tick-icon.svg" width="24" height="24"></div>
+                                <div class="d-flex flex-row justify-content-between d-flex font-size-16 col-8 text-white font-weight-400">
+                                    <div>Pair &amp; Security</div>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-20 pb-3">
+                                <div><img src="./assets/tick-icon.svg" width="24" height="24"></div>
+                                <div class="d-flex flex-row justify-content-between d-flex font-size-16 col-8 text-white font-weight-400">
+                                    <div>Share From The Platform's Profits</div>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-20 pb-3">
+                                <div><img src="./assets/tick-icon.svg" width="24" height="24"></div>
+                                <div class="d-flex flex-row justify-content-between d-flex font-size-16 col-8 text-white font-weight-400">
+                                    <div>Strong Supportive Community</div>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-20 pb-3">
+                                <div><img src="./assets/tick-icon.svg" width="24" height="24"></div>
+                                <div class="d-flex flex-row justify-content-between d-flex font-size-16 col-8 text-white font-weight-400">
+                                    <div>All The World</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center btn app-button">LAUNCH APP</div>
+                    </div>
+                </div>
+                <div class="d-flex flex-row justify-content-between container-gap mx-auto gap-16 flex-md-row flex-column">
+                    <div class="d-flex flex-column col-md-6 col-xs-12 gap-16">
+                        <div class="d-flex flex-column gap-12 tag">
+                            <div class="d-flex align-items-center gap-12 font-size-12 text-uppercase">
+                                <div class="tag-arrow"></div>
+                                TOKEN OWNERSHIP
+                                <div class="tag-arrow right"></div>
+                            </div>
+                            <h2 class="text-white font-size-48 font-size-sm-32">Share Platform <span class="text-hight-light">Revenue</span> Token<br>Ownership</h2>
+                        </div>
+                        <div class="d-flex flex-column gap-12 mb-4">
+                            <div class="d-flex gap-20 pb-3">
+                                <div><img src="./assets/tick-icon.svg" width="24" height="24"></div>
+                                <div class="d-flex flex-row justify-content-between d-flex font-size-16 col-8 text-white font-weight-400">
+                                    <div>Release 1.000.000 BFi Tokens</div>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-20 pb-3">
+                                <div><img src="./assets/tick-icon.svg" width="24" height="24"></div>
+                                <div class="d-flex flex-row justify-content-between d-flex font-size-16 col-8 text-white font-weight-400">
+                                    <div>Profit is distributed quaterly</div>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-20 pb-3">
+                                <div><img src="./assets/tick-icon.svg" width="24" height="24"></div>
+                                <div class="d-flex flex-row justify-content-between d-flex font-size-16 col-8 text-white font-weight-400">
+                                    <div>Profit is distributed quaterly</div>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-20 pb-3">
+                                <div><img src="./assets/tick-icon.svg" width="24" height="24"></div>
+                                <div class="d-flex flex-row justify-content-between d-flex font-size-16 col-8 text-white font-weight-400">
+                                    <div>Token Price Increase</div>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-20 pb-3">
+                                <div><img src="./assets/tick-icon.svg" width="24" height="24"></div>
+                                <div class="d-flex flex-row justify-content-between d-flex font-size-16 col-8 text-white font-weight-400">
+                                    <div>Easy Exchange</div>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-20 pb-3">
+                                <div><img src="./assets/tick-icon.svg" width="24" height="24"></div>
+                                <div class="d-flex flex-row justify-content-between d-flex font-size-16 col-8 text-white font-weight-400">
+                                    <div>Own Sustainable Profit</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center btn app-button">LAUNCH APP</div>
+                    </div>
+                    <div class="col-md-6 col-xs-12 tag-token-logo"></div>
+                </div>
+                <div class="d-flex flex-row justify-content-between container-gap gap-24 flex-column mx-auto">
+                    <div class="d-flex flex-column gap-12 tag">
+                        <div class="d-flex align-items-center gap-12 font-size-12 text-uppercase">
+                            <div class="tag-arrow"></div>
+                            TOKEN EXCHANGE
+                            <div class="tag-arrow right"></div>
+                        </div>
+                        <h2 class="text-white font-size-48 font-size-sm-32">Trade &amp; Earn <span class="text-hight-light">BFi Exchange</span> </h2>
+                    </div>
+                    <div class="d-flex flex-row flex-md-row flex-column">
+                        <div class="d-flex flex-column col-md-6 col-xs-12 gap-16">
+                            <div class="tag-trade tag-trade-left"></div>
+                            <div class="d-flex flex-column gap-12 mb-4">
+                                <div class="d-flex gap-20 pb-3">
+                                    <div><img src="./assets/tick-icon.svg" width="24" height="24"></div>
+                                    <div class="d-flex flex-row justify-content-between d-flex font-size-16 col-8 text-white font-weight-400">
+                                        <div>Trading 24/7 realtime</div>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-20 pb-3">
+                                    <div><img src="./assets/tick-icon.svg" width="24" height="24"></div>
+                                    <div class="d-flex flex-row justify-content-between d-flex font-size-16 col-8 text-white font-weight-400">
+                                        <div>Liquidity pool</div>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-20 pb-3">
+                                    <div><img src="./assets/tick-icon.svg" width="24" height="24"></div>
+                                    <div class="d-flex flex-row justify-content-between d-flex font-size-16 col-8 text-white font-weight-400">
+                                        <div>Tokens Sale On Exchange</div>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-20 pb-3">
+                                    <div><img src="./assets/tick-icon.svg" width="24" height="24"></div>
+                                    <div class="d-flex flex-row justify-content-between d-flex font-size-16 col-8 text-white font-weight-400">
+                                        <div>Easy Buy/Sell</div>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-20 pb-3">
+                                    <div><img src="./assets/tick-icon.svg" width="24" height="24"></div>
+                                    <div class="d-flex flex-row justify-content-between d-flex font-size-16 col-8 text-white font-weight-400">
+                                        <div>Quaterly distributed</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column col-md-6 col-xs-12 gap-16">
+                            <div class="tag-trade tag-trade-right"></div>
+                            <div class="d-flex flex-column gap-12 mb-4">
+                                <div class="d-flex gap-20 pb-3">
+                                    <div><img src="./assets/tick-icon.svg" width="24" height="24"></div>
+                                    <div class="d-flex flex-row justify-content-between d-flex font-size-16 col-8 text-white font-weight-400">
+                                        <div>Strong Community</div>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-20 pb-3">
+                                    <div><img src="./assets/tick-icon.svg" width="24" height="24"></div>
+                                    <div class="d-flex flex-row justify-content-between d-flex font-size-16 col-8 text-white font-weight-400">
+                                        <div>Flexibility Connect Wallet</div>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-20 pb-3">
+                                    <div><img src="./assets/tick-icon.svg" width="24" height="24"></div>
+                                    <div class="d-flex flex-row justify-content-between d-flex font-size-16 col-8 text-white font-weight-400">
+                                        <div>Share 20% Total Profit for Tokens</div>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-20 pb-3">
+                                    <div><img src="./assets/tick-icon.svg" width="24" height="24"></div>
+                                    <div class="d-flex flex-row justify-content-between d-flex font-size-16 col-8 text-white font-weight-400">
+                                        <div>Tokens Limited</div>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-20 pb-3">
+                                    <div><img src="./assets/tick-icon.svg" width="24" height="24"></div>
+                                    <div class="d-flex flex-row justify-content-between d-flex font-size-16 col-8 text-white font-weight-400">
+                                        <div>Share Tokens for others easily</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center btn app-button">EXCHANGE</div>
+                </div>
+                <div class="d-flex flex-row justify-content-center container-gap gap-24 flex-column mx-auto">
+                    <div class="d-flex justify-content-md-center justify-content-start">
+                        <div class="d-flex flex-column gap-12 tag">
+                            <div class="d-flex align-items-center gap-12 font-size-12 text-uppercase justify-content-md-center justify-content-start">
+                                <div class="tag-arrow"></div>
+                                CONTACT US
+                                <div class="tag-arrow right"></div>
+                            </div>
+                            <h2 class="text-white font-size-48 font-size-sm-32">Message To <span class="text-hight-light">GamaX</span> </h2>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row text-white gap-16 flex-md-row flex-column">
+                        <div class="d-flex justify-content-center align-items-center tag-contact">
+                            <div class="d-flex flex-column align-items-center gap-16">
+                                <div class="social-icons"></div>
+                                <div class="font-size-24">Drop Us a Line</div>
+                                <div class="font-size-18">support@bunnybot.io</div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center tag-contact">
+                            <div class="d-flex flex-column align-items-center gap-16">
+                                <div class="social2-icons"></div>
+                                <div class="font-size-24">Bunnybot Channel</div>
+                                <div class="font-size-18">Let's join the our community</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="container-gap">
+                <div class="d-flex flex-column footer container-gap">
+                    <div class="d-flex align-items-md-center align-items-start col-12 mb-4 gap-sm-32 gap-1 flex-md-row flex-column">
+                        <div class="d-flex flex-column ml-2 col-md-6 col-xs-12 text-white">
+                            <div class="d-flex flex-column gap-sm-12 gap-24">
+                                <div class="header-logo"></div>
+                                <div>A new way to make the investment easy, reliable and secure.</div>
+                                <div class="d-flex flex-row gap-16"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAtCAYAAADV2ImkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAThSURBVHgBzVlNVhs5EP5KePJesvLcoLOaF1hgToDnBMAJsJMD0J4LYO/zwBwguDnBeE6AOUFgEZhZ0TcYrwIzL+5KlVq22/+WbbC/92Sp21L316VSVakEvADCxkOgBS8AwhIIG495g+dDINlnUAHMgTwyP9iL2yCKKeHbBLiBMa16+UOMBeFNWEkieSqRwQEYxQndYlcHGP/WFid8Vf+0E8ETXoQrjb9PwJ1qX4rcZqJbJPgLhlvAu7heft/OjrEfiOcCEi7AYJ+Yi5lZiJm55kN8LsJh41uBEkQytbuWpkgoJfk2GiY4+1n6Ad8PiekU/RmI5cN/n0dVZhJOpZrUMw8uy4NbWAFEEKUscSKqnpU/1KaNmUr4j8b9OTNCd3nB9LbqK9F5EH75VhWyp5YQoX5W3q5M6kuTyT40RL9KVk8ZlUUWiA/Cxr2oCTdUv6WOzj7tlMf1o/Fku5LVRQXRrZ1bvALsWmFcW9ITJG1GBz2croOsQt+l73SzGoZf7sPhPjRENpDpeNS2qEP5pdVgEoRHKVUPtUi8lxXagISl07VrXqyLrEKsUMTgC1hOdJ79r0dYTQxS8xKrNcC6Qf9XkXrMoliRUvd2j7Czh7Ce5wVMly/q5T1ZQ2xtctfk2bb+OAOuOhOff9x+jw1C5fJe11SwJZ7wszgsK2ECHWut0sWGQayF1eUOs5WyCRtf872oS0I/bBrMf5FrFdNwtrNVtJcS0PjEqTIbgZRrKY+eRccE875HdVmqlr3oPBVzMClhiU9v4IeSlCL8Ebix1XkHyAfeyMIrSgxeNORCxpy/OsRYHH7ekzu2P8vHGvkN9OIHEl9T1pRyBD/i2ldcr5viebH1iyUsJm1XrUSQ3n0Xww/q53cdgXkk1nJ9D9xYDzx3hZnvOY4FnUVVirpzlfQ0k6hRl4aLOiueZHsLT5E3WB4BUtKxlD0Mqoi2Var/SvmKdEaWgrHbcHT3WgsjkKKe8tgRVGNfQ18FIikLP9/6ihRtIUxO3M/LEO49G31pt13bWwVG8SZwjTgnEr4T0oH4vgKWM1VdBFLOsUp0OgFMTs1E27AjqUYZfoixOGKfzlnnlhOmTXElJ/BcEOJwIvFAOu2+qtSWsU2fAda5cercSBWa+M2jbvwkcP91E2LhLLLbNgl9ydhAWZN0ApN8X8ECWTGSpKSVJHAirVM7LLzdzZMlzdvKIepgY3VZcldaW8Iu9aQlv0lSzu4zP7v0WM/TiXRrrt4IKae6299ndu9nYomslJ8aWDPIpnURqO5mUw4DsYRmJl3G51Bya6dYE0L7bqO6G2MoqKLRzpqUw5/p1Vbp/ONvV3hFVC4fhChH2hbBHdXL2wM2eyRa0w59nelElct/jvFKyJIlmx/ZHnEwY8NL0ZlqlvRrqEeqBn2ykm6tjus3NaE9kGhmNBNDlWVOgCYQDQiS+HOphmlk7f+zH2h1WqOvAGkcUJ+V1p+PqD0yO2FOwvSQRhe7OZp1HDHnoYwcEjJXKQ3QFbFIopUYU/OVuCatDcxBn6hdXKKr882e17GXEC/K9J0Onc+l5EF3OUO3P0ZCx0QkaQpCUOJt0t1H0P3HnkaBaj6HPF6Es8RF4iUZvI9Jh4cTIVMPupIgobnIadRChLOw5LuHhhob8+AHiBQlXGU5fKQ7yAwse2T2E9RXe5iOkJr1AAAAAElFTkSuQmCC" width="44" height="44"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAtCAYAAADV2ImkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAT9SURBVHgBzVlNdtpIEP66zcy8ZDMcQVnNi70wPoE1J7BzgojkABZzAWCfZ+MDxMInCDlByAkGL2LPrKIbDKuYyQuqVHW3QGAwSIDhe6/RDy3p66+rq6urgQ0gjO48KdgAFFZAGH0tawxOgeSYoCog8viV5cla1IdSsUqolwCfoXW3VX0ZoyByExaSSO4DpXECgj+nWuyOHmZ/tUsJXbfeHrSRE7kI16J/zkDDxlhF6pNSPST4CE1d4Hncqr7oZ58xDcSggoQq0DhWRH6mF2IiauYhvhThMPpSUQna3LWHhiYrZEk+a08TXPwuacC3U0WqjnEPxNzwP5cxlYWErapJK/PiKr+4izWAhQiyxJVSjfPqy+ZjzzxK+K/o9oIIobu8JPWskVfRZRC+/9JgsnVDSKF1Xt2vzaur5pO9i9i+AmOnhFqRAZIHYXTLZkKR2Dcf2+dvD6qz6qnZZFNlZVCBbeughyeAGSuET4b0HKX1w4fu6tsgK5BvyTddr4bh+9twuo6aIutxd3yVczaH6qbNYB6YR2DNQzwSHWVFm1CYK31yp5fbIitgL9Qm0CUMJ3WR/W9EWFwMrHuJxRtg21DfG7Azps9eJEhvjwg7fwgz82zAdeVFq3rEY4iMT05dnjmXH+fAxWbiizf7L7BDqF3dypjy9ngmfMcTllFYQb2Wo6iLHQN7C2PLQyKjsg6jv8ujqItDP+wa9P9td+bbcHa455tLDmhWiVMXgXvP5/LBzp7LQ2yZD11zMbz3NbQlzPHpZ6wZTK7MhSci+o8vxWVysI9ygfcYbhyD+1q5kLG0JnNwJAOyPl2Iymz1kUvqefLPnDQ0zxAPvhL/enLxA8lKroxMYG4UlAGcqtjlIgM5Su+xQF3kxd4vPRl97NIOSxgF0c9j5ISoyYeAywkXP/OXNF6irRjWFNIGFIxLBvy+3+SkPJo4Ck4WougZJsmKGxJf/jsmyQoKEXYDT1AuYQVw97b50GalK7Dku9LlfC2NaM14ZOWBrc0yHOlaqxiYZE+WN45sgNlkBYUUNnOFRZ8JKyf3oDDhKXjpy6fu96VhKIRfPXcSi8I35nRounUdkIZfw9rxZeZ+8YXAcOiZo2KFySU9xCljPeiwkgEXUVR8sHgLUfsGRZGZ3DQz7bjbh1gDpv2sG5hHXBooiOzkxiYx6LmB568y8BZ8MBbFUQAmqeiCMxNemkDZuRudfAuxa0iSQA5ke8qtOJRuuZtnm1K5KLhnTKxesgPZEnapJynlXVI5u85859Jjo6mZ1W26406obFMO43Vmej8TS2RVvo+wZSiT1oUntptNOUzkJSQz6TI+p5xbq2NLCM23tdhuDBuejqAeVpakHD7Yq73g4s0f13hC1K7umCi15ZyFe9Wq7ney/z/IrUmFsc0M27Wrf1/jiZAlq0x+ZJKsQM96kG2mkSX9FOZhzWBMltOtjVn1Hk1oTySaCZ1Eq9q6V9bGG4ATf242e4ys+X/xC41NS0LOgw0RW4vS+ssRNVtmZ0RJaDdpZLDrV4u2I5bclJH5nBrKLjAFMSvRTbRu5lVcktacWzgZEzWDi211ud7Lte3FxH3uvvrU/pwlD3VT0qr3Y7xH55CwkrrCBDneVrJY9dJ/zG4UVDPPJk8uwlnirHjADx9j3ubhXHDXQ11zkNApshtViHAWhny6aSirDZpsAKvIYSXx5qO6AffAqltmPwGe52sQ6tegdgAAAABJRU5ErkJggg==" width="44" height="44"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAtCAYAAADV2ImkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAU+SURBVHgBzVlNVhs5EK4STN5LNuO5QbOaF1hgTkDPCYATxE4OQHsuYHufh80BgpsTDHMCzAmARWBm5Z4beDaB5MVdqZLUtto/uNXEwPeeWi21Wv2pVF0qlQBWgKh3G0iCFQDhEYh6g4qC+32AdJcAq0AUcJeVfCsaAmKCKV2lABegVL9bf5tASXgTFpKQ3tVQwR4QhAuaJTYPYP5X+5TSaffDVgye8CLc6P1zCDRqTaRIQ0K8ghT+BkV9gDdJt74xdN/RA4T7KqRUBQW7SBQ6s5AQUduHeCHCUe9zFVOIeWq3NU2WkCH5Op4muLwvGcCXfSRswmQGEh74H0VUZSlhI9W063Rc54778BPAgqi5xBGxdVR/237onQcJ/9m76RBBZIvHhK9bvhItgujT5xaTbWpCCN2j+mZjUVtcTPa2x/pV03pK0Cjzg/gg6t2wmlBP9Jvz+OjDVn1eO5xPNpOs/FTAurV1BU8A/a8QnGvSCyStZl+6bT4HWYF8S75pZzWKPt1E021wimzA0zGQe1aH+qrVYBGYR82oh1gk2nGFlpMwNzq3t8fPRVbAVigmoGPQnLDjPhsTFhMDxrwkYg3guYHfWmBWzJCtSC2rHhO29hD0yrMC0+WLbn2H/yHSNjkzefpeLtaAi84knfebG/CC0Di5kX8qWOOV8CMvWFrCCPhOcpEuvDCwtdC6PCLSUlZR77Iy9rrY9YMS4IGGnLqcOnOedW0KoQzU19jehcadHa2FusgOja+fyiQCTpd8K9blkFPE5QFNMLD1ks7tswA8ILrMWV8XRnehAmUIs396Af5ocapO1QUL7rNyDzzBg9Tc2AcPFVqXcd1THewUvwN/hN7qQSO9cBAPWPE1kMJ3SH1NWQ3Kw2+ga79owmzStsVKBKb2TQJ+mP7oRNfykI8lU3X7LOUKFMZ9JszKeOHwWSzmTGnCaYPVix0XY4YsYq7b4VyS60QJ2SoUhP3x8oQ9Mf2xPhPLOnWJmZ/FPLte0kchKL0Nh2yvVRjBVDl0zFXo1O/KxU7/7pI+FkKvFQbDdR6/EJadrVQWVYvKnI9fMrEh5InUrPpU5rzzKxTGq8DeJCJhM1UjKjVFDoRQMKc+sM+mhfE/FMVoFOgcWcJs2xLxgMQoc3ZWsIsWmCkObFneu7Dlbade9Pk/S3YfJlJOOMVQFM7ipphpRnK76PsooSdE8erq9uNCZsh1kVgKeWbTgdRZwts2b9tnhbde7uKGotBIrway8WPH/bcyvrDoKXfaX9Km6kMyg7ttY9cXlXaUrflR6ZcISmAZWdum3GY2TWuScQAnltzYYeZtKw89zdvKwQPVKyqbs1PJNWEbepJUKSvlVcDdZ3604bHxSsfSbdv8RUjZ6O5kn5nVO76EK+U7b5/1ZwN1WBcC0V035JDzJSQyaSM++xxba8IzIdLfVqK7CafcPhNnG0tQDv4ypbVa5/3vp/CEaJzcMlGK5Z4Fd9Ctb+YWsxlvTRpMdGYUN07+LbOrKAWXLOr4yObMyjvXvWSdabmkn0I9jBpMyHK4tTWv3YMB7VygmeAsVdh4zAnQAqIBAgf+bKjhIbL6+fIOtU5LvCEA4y90l4X1ixHVR2aHRGlkDmnkZ1cHy44jCh7K8CEhUQsn+7iEJdFPlWr7SlyC1hxb2JsQ1T8X62qx2StE2CEe8vQ1p87nDHnA63WFV99nNpwpS1JVmSD727gHjs+sT6MA2z6HPF6EXeIs8RrmfeKC4KkHPGUn4azMaVQpwi40+ezQUBx0yg+ApcjuKvHhI14Dz8Bjj8x+AFr+lnSjv5bLAAAAAElFTkSuQmCC" width="44" height="44"></div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row col-md-6 col-xs-12 gap-24">
+                            <div class="d-flex flex-column gap-16">
+                                <h2 class="font-size-18 font-size-sm-14 text-white upper-case">Useful Links</h2>
+                                <div class="d-flex flex-column gap-12 font-size-16 font-size-sm-12"><a>How it Works</a><a>Join to invest</a><a>Tokens Exchange</a></div>
+                            </div>
+                            <div class="d-flex flex-column gap-16">
+                                <h2 class="font-size-18 font-size-sm-14 text-white upper-case">Community</h2>
+                                <div class="d-flex flex-column gap-12 font-size-16 font-size-sm-12"><a>Help Center</a><a>Partners</a><a>Blog</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copy-right font-size-16 font-size-sm-14 text-center pt-4 mb-4 text-white">© BUNNYBOT 2024, All Rights Reserved</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

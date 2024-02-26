@@ -1,5 +1,4 @@
 import React from 'react'
-import { FlexFullCenter } from './Flex'
 import DivButton from './DivButton'
 import DivTag from './DivTag'
 
@@ -20,6 +19,7 @@ const NavMenu = () => {
                             <a className="dropdown-item" href="#">Token</a>
                             <a className="dropdown-item" href="#">Exchange</a>
                             <a className="dropdown-item" href="#">Contact</a>
+                            <a className="dropdown-item" href="#">Blog</a>
                         </div>
                     </>
                 }
@@ -28,7 +28,7 @@ const NavMenu = () => {
             <div className="header-logo"></div>
 
             <DivTag
-                classNameWeb="d-md-flex justify-content-center align-items-center header-nav"
+                classNameWeb="d-md-flex justify-content-center align-items-center header-nav gap-16 gap-sm-8"
                 webContent={
                     <>
                         <a className="nav-selected">About us</a>
@@ -37,15 +37,13 @@ const NavMenu = () => {
                         <a>Token</a>
                         <a>Exchange</a>
                         <a>Contact</a>
+                        <a>Blog</a>
                     </>
                 }
             />
-            <DivTag
-                webContent={
-                    <DivButton>Launch App</DivButton>
-                }
-            />
-
+            <div className='d-none d-xs-none d-sm-none d-lg-flex'>
+                <DivButton className="">Launch App</DivButton>
+            </div>
         </div>
     )
 }
